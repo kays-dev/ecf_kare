@@ -19,10 +19,10 @@ class ProductController
     public function set()
     {
         $product = new Product();
-        $product->setName($_POST['name']);
+        $product->setName($_POST['nom']);
         $product->setType($_POST['type']);
-        $product->setPrice((float)$_POST['price']);
-        $product->setStock((int)$_POST['stock']);
+        $product->setPrice((float)$_POST['prix']);
+        $product->setStock((int)$_POST['quantite']);
 
         $this->productRepository->addProduct($product);
 
