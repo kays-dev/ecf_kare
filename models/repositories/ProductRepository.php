@@ -20,7 +20,6 @@ class ProductRepository
     public function addProduct(Product $product): bool
     {
         $document = $this->collection->insertOne([
-            '_id' => $product->getId(),
             'name' => $product->getName(),
             'type' => $product->getType(),
             'price' => $product->getPrice(),
