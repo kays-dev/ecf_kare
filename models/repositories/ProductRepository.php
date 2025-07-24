@@ -21,7 +21,7 @@ class ProductRepository
     {
         $document = $this->collection->insertOne([
             '_id' => $product->getId(),
-            'nom' => $product->getName(),
+            'name' => $product->getName(),
             'type' => $product->getType(),
             'price' => $product->getPrice(),
             'stock' => $product->getStock(),
@@ -38,7 +38,7 @@ class ProductRepository
         foreach ($cursor as $document) {
             $product = new Product();
             $product->setId($document['_id']);
-            $product->setName($document['nom']);
+            $product->setName($document['name']);
             $product->setType($document['type']);
             $product->setPrice($document['price']);
             $product->setStock($document['stock']);
@@ -58,7 +58,7 @@ class ProductRepository
 
         $product = new Product();
             $product->setId($document['_id']);
-            $product->setName($document['nom']);
+            $product->setName($document['name']);
             $product->setType($document['type']);
             $product->setPrice($document['price']);
             $product->setStock($document['stock']);
@@ -70,7 +70,7 @@ class ProductRepository
     {
 
         $document = $this->collection->updateOne(['_id'=> new ObjectId($product->getId())],['$set' => [
-            'nom' => $product->getName(),
+            'name' => $product->getName(),
             'type' => $product->getType(),
             'price' => $product->getPrice(),
             'stock' => $product->getStock(),

@@ -29,7 +29,7 @@ class DatabaseConnection
         return $this->database;
     }
 
-    public function getCollection(string $dbName, string $collectionName): Collection{
-        return $this->getConnected()->selectCollection($dbName, $collectionName);
+    public function getCollection(string $collectionName): Collection{
+        return $this->getConnected()->selectCollection($collectionName);
     }
 }

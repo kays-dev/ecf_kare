@@ -1,4 +1,4 @@
-<?php require 'header.php'; ?>
+<?php require __DIR__.'/../templates/header.php'; ?>
 
 <a href="?action=product-create" class="btn btn-primary mb-3">Ajouter un produit</a>
 
@@ -29,4 +29,4 @@
     </tbody>
 </table>
 
-<?php require 'footer.php'; ?>
+<?php require __DIR__.'/../templates/footer.php'; ?>

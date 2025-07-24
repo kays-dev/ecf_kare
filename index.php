@@ -3,9 +3,9 @@
 require_once __DIR__ . '/controllers/ProductController.php';
 
 $productControl = new ProductController();
+$id = $_GET['id'] ?? null;
 
-$action = $_GET['action'] ?? 'auth';
-$id = $_GET['_id'] ?? null;
+$action = $_GET['action'] ?? 'product-list';
 
 switch ($action) {
     case 'product-create':
@@ -18,7 +18,7 @@ switch ($action) {
         $productControl->list();
         break;
     case 'product-show':
-        $contractControl->show($id);
+        $productControl->show($id);
         break;
     case 'product-edit':
         $productControl->edit($id);
