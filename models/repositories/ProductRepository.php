@@ -3,6 +3,7 @@
 use MongoDB\Collection;
 
 require_once __DIR__ . '/../Product.php';
+use MongoDB\BSON\ObjectId;
 
 class ProductRepository
 {
@@ -14,7 +15,7 @@ class ProductRepository
     {
         $this->connection = new DatabaseConnection();
         $mongodb =  $this->connection;
-        $this->collection = $mongodb->getCollection('testdb', 'products');
+        $this->collection = $mongodb->getCollection('produits');
     }
 
     public function addProduct(Product $product): bool

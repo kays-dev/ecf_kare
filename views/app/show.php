@@ -1,22 +1,3 @@
-<?php
-require_once __DIR__ . '/../Product.php';
-require_once __DIR__ . '/../ProductRepository.php';
-
-$productRepository = new ProductRepository();
-
-if (!isset($_GET['id'])) {
-    echo "Aucun ID de produit fourni.";
-    exit;
-}
-
-$product = $productRepository->viewProduct($_GET['id']);
-
-if (!$product) {
-    echo "Produit non trouvé.";
-    exit;
-}
-?>
-
 <?php require __DIR__ . '/../templates/header.php'; ?>
 <div class="container mt-5">
     <div class="card shadow">

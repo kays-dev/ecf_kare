@@ -20,7 +20,7 @@
             <td><?= number_format($product->getPrice(), 2); ?></td>
             <td><?= $product->getStock(); ?></td>
             <td>
-                <a href="?action=product-show&id=<?= $product->getId(); ?>" class="btn btn-warning btn-sm">Consulterr</a>
+                <a href="?action=product-show&id=<?= $product->getId(); ?>" class="btn btn-warning btn-sm">Consulter</a>
                 <a href="?action=product-edit&id=<?= $product->getId(); ?>" class="btn btn-warning btn-sm">Modifier</a>
                 <a href="?action=product-delete&id=<?= $product->getId(); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Confirmer la suppression ?');">Supprimer</a>
             </td>
