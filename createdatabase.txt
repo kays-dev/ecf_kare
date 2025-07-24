@@ -1,0 +1,5 @@
+**Création de la base de données**
+use testdb
+
+**Création de la collection**
+db.createCollection("produits")
